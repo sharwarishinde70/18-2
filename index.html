@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffd1dc, #ffe6ef);
+      overflow-x: hidden;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #7a1f3d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #5a2a3c;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    button {
+      background: #ff6f91;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      max-width: 900px;
+      margin: 50px auto;
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%);
+    }
+
+    .card span {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-size: 0.9rem;
+      background: rgba(0,0,0,0.4);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .heart {
+      position: fixed;
+      font-size: 20px;
+      animation: float 5s linear infinite;
+      color: #ff4d6d;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday, Beautiful!</h1>
+  <p>Today is all about celebrating you and the joy you bring to my life</p>
+  <button onclick="start()">Start the Celebration 🎉</button>
+
+  <div class="gallery" id="gallery">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+      <span>Creating memories together ❤️</span>
+    </div>
+  </div>
+
+  <script>
+    function start() {
+      document.getElementById("gallery").style.display = "grid";
+      for (let i = 0; i < 30; i++) {
+        createHeart();
+      }
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+  </script>
+
+</body>
+</html>
