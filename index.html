@@ -3,129 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <title>Luxury Cute Celebration 💖</title>
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  padding: 40px 20px;
-  overflow: hidden;
+  font-family:'Poppins', sans-serif;
+  text-align:center;
+  padding:40px 20px;
+  overflow:hidden;
   background: radial-gradient(circle at center, #ffe6ef 0%, #ffc1d6 40%, #ff9bbd 70%, #e75480 100%);
 }
-
 h1 {
-  font-family: 'Parisienne', cursive;
-  font-size: 3rem;
-  color: #2a0f3f;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 6px rgba(255,200,220,0.5);
+  font-family:'Parisienne', cursive;
+  font-size:3rem;
+  color:#2a0f3f;
+  margin-bottom:20px;
+  text-shadow:1px 1px 6px rgba(255,200,220,0.5);
 }
-
 p {
-  font-size: 1.1rem;
-  color: #3a1a55;
-  margin-bottom: 40px;
+  font-size:1.1rem;
+  color:#3a1a55;
+  margin-bottom:40px;
 }
-
 button {
-  margin-top: 20px;
-  background: #ff6f91;
-  color: white;
-  border: none;
-  padding: 14px 32px;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  margin-top:20px;
+  background:#ff6f91;
+  color:white;
+  border:none;
+  padding:14px 32px;
+  font-size:1rem;
+  border-radius:30px;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
   transition: transform 0.2s ease;
 }
-
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255,120,180,0.6);
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(255,120,180,0.6);
 }
-
-/* Gallery */
 .gallery {
-  display: grid;
-  max-width: 900px;
-  margin: 50px auto;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  display:grid;
+  max-width:900px;
+  margin:50px auto;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
-
 .card {
-  position: relative;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  position:relative;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
 }
-
 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
-  transition: filter 0.5s ease;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(100%);
+  transition:filter 0.5s ease;
 }
-
-.card img:hover {
-  filter: grayscale(0%);
-}
-
-/* Floating hearts */
+.card img:hover { filter:grayscale(0%); }
 .heart {
-  position: absolute;
-  font-size: 20px;
-  pointer-events: none;
-  user-select: none;
-  color: #ff6f91;
-  opacity: 0.7;
-  animation-name: floatHeart;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  position:absolute;
+  font-size:20px;
+  pointer-events:none;
+  user-select:none;
+  color:#ff6f91;
+  opacity:0.7;
+  animation-name:floatHeart;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
 }
-
 @keyframes floatHeart {
-  0% { transform: translateY(0) scale(1); opacity: 0.7; }
-  50% { transform: translateY(-30vh) scale(1.1); opacity: 0.9; }
-  100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+  0% { transform:translateY(0) scale(1); opacity:0.7; }
+  50% { transform:translateY(-30vh) scale(1.1); opacity:0.9; }
+  100% { transform:translateY(-100vh) scale(1.2); opacity:0; }
 }
-
-/* Floating double hearts and ribbons */
 .floating-emoji {
-  position: absolute;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1000;
-  opacity: 0.8;
-  font-size: 20px;
-  animation-name: floatRandom;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  position:absolute;
+  pointer-events:none;
+  user-select:none;
+  z-index:1000;
+  opacity:0.8;
+  font-size:20px;
+  animation-name:floatRandom;
+  animation-timing-function:linear;
+  animation-fill-mode:forwards;
 }
-
 @keyframes floatRandom {
-  0% { transform: translate(0,0) rotate(0deg); }
-  25% { transform: translate(20px,-40px) rotate(20deg); }
-  50% { transform: translate(-30px,-80px) rotate(-15deg); }
-  75% { transform: translate(25px,-120px) rotate(10deg); }
-  100% { transform: translate(0,-160px) rotate(0deg); }
+  0% { transform:translate(0,0) rotate(0deg); }
+  25% { transform:translate(20px,-40px) rotate(20deg); }
+  50% { transform:translate(-30px,-80px) rotate(-15deg); }
+  75% { transform:translate(25px,-120px) rotate(10deg); }
+  100% { transform:translate(0,-160px) rotate(0deg); }
 }
 </style>
 </head>
-
 <body>
 
 <h1>Our First Chapter 💕</h1>
@@ -138,71 +112,56 @@ This year has been incredible, and I can’t wait to see all the adventures, dre
 Here’s to us, our love, and to many, many more years together. I love you, more than words could ever express. 💕</p>
 <button onclick="startCelebration()">Start the Celebration 🎉</button>
 
-<div class="gallery" id="gallery">
-  <!-- Images will be added dynamically -->
-</div>
+<div class="gallery" id="gallery"></div>
 
 <script>
-// Array of image URLs
+// Use local images
 const images = [
-  "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
-  "https://images.unsplash.com/photo-1511988617509-a57c8a288659"
+  "img1.jpg",  // Pinterest image downloaded
+  "img2.jpg",
+  "img3.jpg",
+  "img4.jpg"
 ];
 
-// Continuous soft floating hearts
 function createHeart() {
   const heart = document.createElement("div");
   heart.className = "heart";
   heart.innerText = "❤️";
-
-  heart.style.left = Math.random() * (window.innerWidth - 50) + "px";
-  heart.style.fontSize = 15 + Math.random() * 25 + "px";
-
-  const duration = 8 + Math.random() * 5;
-  heart.style.animationDuration = duration + "s";
-
+  heart.style.left = Math.random()*(window.innerWidth-50)+"px";
+  heart.style.fontSize = 15+Math.random()*25+"px";
+  const duration = 8+Math.random()*5;
+  heart.style.animationDuration = duration+"s";
   document.body.appendChild(heart);
-  setTimeout(() => heart.remove(), duration * 1000);
+  setTimeout(()=>heart.remove(), duration*1000);
 }
 
-// Floating double hearts and ribbons
 function createFloatingEmoji(emoji) {
   const el = document.createElement("div");
   el.className = "floating-emoji";
   el.innerText = emoji;
-
-  el.style.left = Math.random() * (window.innerWidth - 50) + "px";
-  el.style.top = Math.random() * (window.innerHeight - 50) + "px";
-
-  el.style.fontSize = 15 + Math.random() * 25 + "px";
-  const duration = 6 + Math.random() * 6;
-  el.style.animationDuration = duration + "s";
-
+  el.style.left = Math.random()*(window.innerWidth-50)+"px";
+  el.style.top = Math.random()*(window.innerHeight-50)+"px";
+  el.style.fontSize = 15+Math.random()*25+"px";
+  const duration = 6+Math.random()*6;
+  el.style.animationDuration = duration+"s";
   document.body.appendChild(el);
-  setTimeout(() => el.remove(), duration * 1000);
+  setTimeout(()=>el.remove(), duration*1000);
 }
 
 function startCelebration() {
-  // Add images dynamically
   const gallery = document.getElementById("gallery");
-  gallery.innerHTML = ""; // clear in case button clicked again
-  images.forEach(src => {
+  gallery.innerHTML = "";
+  images.forEach(src=>{
     const card = document.createElement("div");
-    card.className = "card";
-    const img = document.createElement("img");
-    img.src = src;
+    card.className="card";
+    const img=document.createElement("img");
+    img.src=src;
     card.appendChild(img);
     gallery.appendChild(card);
   });
-
-  // Hearts appear continuously
-  setInterval(createHeart, 400);
-
-  // Floating emojis
-  setInterval(() => createFloatingEmoji("💖"), 2000);
-  setInterval(() => createFloatingEmoji("🎀"), 2000);
+  setInterval(createHeart,400);
+  setInterval(()=>createFloatingEmoji("💖"),2000);
+  setInterval(()=>createFloatingEmoji("🎀"),2000);
 }
 </script>
 
